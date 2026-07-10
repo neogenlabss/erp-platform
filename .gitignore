@@ -1,39 +1,54 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
+# ==========================
+# Backend (Python/Django)
+# ==========================
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/**/*.pyo
 
 # Virtual Environment
-.venv/
-venv/
-env/
+backend/.venv/
+backend/venv/
+backend/env/
 
 # Environment Variables
-.env
+backend/.env
 
 # Django
-db.sqlite3
-media/
-staticfiles/
+backend/db.sqlite3
+backend/media/
+backend/staticfiles/
 
+# Python Packaging
+backend/*.egg-info/
+backend/dist/
+backend/build/
+
+# Python Cache
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/.mypy_cache/
+
+# ==========================
+# Frontend
+# ==========================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# ==========================
 # IDE
+# ==========================
 .vscode/
 .idea/
 
+# ==========================
 # OS
+# ==========================
 .DS_Store
 Thumbs.db
 
+# ==========================
 # Logs
+# ==========================
 *.log
-
-# Python packaging
-*.egg-info/
-dist/
-build/
-
-# Test/Cache
-.pytest_cache/
-.coverage
-htmlcov/
-.mypy_cache/
