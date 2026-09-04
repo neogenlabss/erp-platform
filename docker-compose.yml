@@ -7,7 +7,7 @@ services:
     container_name: erp_backend
 
     ports:
-      - "8000:8000"
+      - "8500:8000"
 
     volumes:
       - ./backend:/app
