@@ -45,7 +45,12 @@ INSTALLED_APPS = [
 
     #local apps
     'modules.accounts',
+    'modules.tenants',
+    'modules.rbac'
 ]
+
+# Custom User Model
+AUTH_USER_MODEL = "accounts.User"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
