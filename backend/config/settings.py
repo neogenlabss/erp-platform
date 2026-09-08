@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
     #local apps
     'modules.accounts',
-    'modules.tenants',
+    # 'modules.tenants',
     'modules.rbac'
 ]
 
