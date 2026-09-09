@@ -5,7 +5,7 @@ class Role(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
     is_active = models.BooleanField(default=True)
-    permissions = models.ManyToManyField("Permissions", blank=True, related_name="role")
+    permissions = models.ManyToManyField("Permission", blank=True, related_name="role")
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -14,7 +14,7 @@ class Role(models.Model):
         return self.name
 
 
-class Permissions(models.Model):
+class Permission(models.Model):
     name = models.CharField(max_length=100, unique=True)
     codename = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)

@@ -1,10 +1,10 @@
 from dataclasses import fields
 from rest_framework import serializers
-from .models import Role,Permissions
+from .models import Role,Permission
 
-class PermissionsSerializer(serializers.ModelSerializer):
+class PermissionSerializer(serializers.ModelSerializer):
     class Meta:
-        model=Permissions
+        model=Permission
 
         fields=[
             "id",
