@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .models import Permission, Role
-from .permissions import IsActiveUser
+from .permissions import IsActiveUser,HasRBACPermission
 from .serializers import PermissionSerializer, RoleSerializer
 from .services import (
     assign_permissions_to_role,
@@ -16,7 +16,7 @@ from .services import (
 
 
 class RoleListCreateView(APIView):
-    permission_classes = [IsActiveUser]
+    permission_classes = [IsActiveUser,HasRBACPermission]
 
     def get(self, request):
         roles = Role.objects.filter(is_active=True)
