@@ -20,6 +20,9 @@ class HasRBACPermission(BasePermission):
         if not request.user.is_active:
             return False
 
+        if request.user.is_superuser:
+            return True
+            
         required_permission = getattr(view, "required_permission", None)
 
         if not required_permission:
